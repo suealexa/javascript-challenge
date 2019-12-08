@@ -1,24 +1,27 @@
-//working code
+
 //from data.js
 var ufoData = data;
 console.log(ufoData);
 
-// YOUR CODE HERE!
 // Get a reference to the table body
 var tbody = d3.select("tbody");
-// //  Use d3 to update each cell's text with
-// // sightings values (weekday, date, high, low)
+
+//  Use d3 to update each cell's text with
+// sightings values (date)
  ufoData.forEach(function(sightings) {
   console.log(sightings);
- var row = tbody.append("tr");
+ 
+  var row = tbody.append("tr");
 Object.entries(sightings).forEach(function([key, value]) {
 console.log(key, value);
-//     // Append a cell to the row for each value
-//     // in the sightings object
+
+// Append a cell to the row for each value
+// in the sightings object
 var cell = row.append("td");
 cell.text(value);
 });
  });
+
 // Select the button
 var button = d3.select("#filter-btn");
 button.on("click", function() {
@@ -41,11 +44,11 @@ button.on("click", function() {
         var row = tbody.append("tr");
         Object.entries(event).forEach(function([key, value]) {
             console.log(key, value);
-     // Append a cell to the row for each value
-//     // in the weather report object
+
+     // Append a cell to the row for each value in the weather report object
    var cell = row.append("td");
      cell.text(value);
-    
+
 });
     });
 });
