@@ -24,18 +24,18 @@ cell.text(value);
 
 // Select the button
 var button = d3.select("#filter-btn");
-var button1 = d3.select("#filter-btn cities");
+//var button1 = d3.select("#filter-btn cities");
 //var button2 = d3.select("#filter-btn states");
 button.on("click", function() {
 
-    // Select the input element and get the raw HTML node
+    // Select the input date and get the raw HTML nodes
     var searchDate = d3.select("#datetime");
-    var searchCity = d3.select("#city");
+   // var searchCity = d3.select("#city");
     //var searchState = d3.select("#state");
 
-    // Get the value property of the input element
+    // Get the value property of the input date
     var inputValue = searchDate.property("value");
-    var inputValue = searchCity.property("value");
+    //var inputValue = searchCity.property("value");
     //var inputValue = searchState.property("value");
 
     var filteredData = ufoData.filter(event => event.datetime === inputValue);
